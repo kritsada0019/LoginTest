@@ -12,7 +12,7 @@ public class LoginActivity extends AppCompatActivity {
     //Explicit ประกาศตัวแปร
     EditText nameEditText,usernameEditText, passwordEditText;
     Button loginButton;
-
+    String nameString;
 
 
     @Override
@@ -29,7 +29,11 @@ public class LoginActivity extends AppCompatActivity {
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Hallo!! Hello!!", Toast.LENGTH_SHORT).show();
+
+
+                nameString = nameEditText.getText().toString().trim();
+
+                Toast.makeText(getApplicationContext(), "Hallo!! Hello!! " + nameString + " G G", Toast.LENGTH_SHORT).show();
             }
         });
 
